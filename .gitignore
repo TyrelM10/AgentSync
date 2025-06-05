@@ -1,0 +1,59 @@
+backend/credentials.json
+backend/token.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.env/
+.venv/
+env/
+ENV/
+
+# VSCode settings (optional)
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Coverage reports
+htmlcov/
+coverage.xml
+.coverage
+
+# Logs
+*.log
+
+# Environment variable files
+.env
+.env.*
+
+# Database files (SQLite example)
+*.db
+*.sqlite3
+
+# FastAPI specific (if using static files or uploads)
+static/
+uploads/
+media/
+
+# Docker (optional)
+*.pid
+*.tar
+*.gz
+*.img
+*.container
+*.lock
+
+# IDE-specific
+.idea/
+*.swp
+backend/app/credentials.json

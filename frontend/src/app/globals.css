@@ -1,0 +1,168 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap'); */
+:root {
+  --background: #0A1128;
+  --foreground: #E5E7EB;
+  --accent-blue: #122a52;
+  --accent-blue-light: #223a58;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Inter", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0A1128;
+    --foreground: #E5E7EB;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background glow effect */
+#glow-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle 200px at 0px 0px, rgba(59, 130, 246, 0.15) 0%, transparent 100%);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+/* Layout styles */
+.layout-container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 200px;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.mic-section {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Custom futuristic styles */
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Glassmorphism effect */
+.backdrop-blur-lg {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Neon blue glow effect */
+.glow-blue {
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Mic button styles */
+.mic-button {
+  background: rgba(59, 130, 246, 0.2);
+  border: 2px solid rgba(59, 130, 246, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mic-button.listening {
+  background: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+  }
+}
+
+.speech-display {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(0, 6, 16, 0.3);
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  color: #1d2631;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Hover effects */
+.sidebar-item:hover, .active-tool {
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--accent-blue-light);
+}
+
+/* Tailwind theme extension */
+@layer base {
+  .dark .bg-gray-800 {
+    background-color: rgba(15, 23, 42, 0.9);
+  }
+  .dark .text-white {
+    color: var(--foreground);
+  }
+  .dark .border-blue-700\/30 {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
