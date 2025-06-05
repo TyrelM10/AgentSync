@@ -59,19 +59,19 @@ Below are the screenshots of the AgentSync POC Interface.
 <div style="margin-bottom: 20px;">
   <img src="/screenshots/landing.png" alt="Home Page" width="600">
 </div>
-<div>
+<div style="margin-bottom: 20px;">
   <img src="/screenshots/gmail_server.png" alt="Mail Page" width="600">
 </div>
-<div>
+<div style="margin-bottom: 20px;">
   <img src="/screenshots/linear.png" alt="Linear Page" width="600">
-</div>
+</div style="margin-bottom: 20px;">
 <div>
   <img src="/screenshots/notion_create.png" alt="Notion Create Page" width="600">
 </div>
-<div>
+<div style="margin-bottom: 20px;">
   <img src="/screenshots/notion_search.png" alt="Notion Search Page" width="600">
 </div>
-<div>
+<div style="margin-bottom: 20px;">
   <img src="/screenshots/slack.png" alt="Slack Page" width="600">
 </div>
 
